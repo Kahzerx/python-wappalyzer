@@ -26,7 +26,7 @@ class Wappalyzer:
 
         if len(os.listdir("data")) == 0:
             for j in json_list:
-                r = requests.get(f"https://raw.githubusercontent.com/wappalyzer/wappalyzer/master/src/technologies/{j}.json")
+                r = requests.get(f"https://raw.githubusercontent.com/enthec/webappanalyzer/main/src/technologies/{j}.json")
                 with open(f"data/{j}.json", "w") as f:
                     f.write(r.text)
 
